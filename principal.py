@@ -8,11 +8,11 @@ def run_game():
     ai_settings = Settings()
     screen = pg.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pg.display.set_caption("Alien Invasion")
-    nave = Nave(screen)
+    nave = Nave(ai_settings, screen)
     while(True):
             funcao.checa_eventos(nave)
-            nave.pra_direita()
+            nave.movimento()
             funcao.atualiza_tela(ai_settings, screen, nave)
 
 
-run_game()
+run_game() 
